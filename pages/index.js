@@ -9,10 +9,31 @@ import Advert from "../components/Advert";
 import Footer from "../components/Footer";
 import '../styles/pages/index.css'
 import axios from 'axios'
+import  servicePath  from '../config/apiUrl'
+import marked from 'marked'
+import hljs from "highlight.js";
+import 'highlight.js/styles/monokai-sublime.css';
 
 const Home = (list) => {
 
     const [mylist, setMylist] = useState(list.data)
+
+    const renderer = new marked.Renderer();
+    marked.setOptions({
+        renderer: renderer,
+        gfm: true,
+        pedantic: false,
+        sanitize: false,
+        tables: true,
+        breaks: false,
+        smartLists: true,
+        smartypants: false,
+        xhtml: false,
+        highlight: function (code) {
+            return hljs.highlightAuto(code).value;
+        }
+
+    });
 
     return (
         <div>
@@ -38,7 +59,9 @@ const Home = (list) => {
                                     <span><BranchesOutlined/> {item.typeName}</span>
                                     <span><TeamOutlined/> {item.view_count}人</span>
                                 </div>
-                                <div className="list-context">{item.introduce}</div>
+                                <div className="list-context"
+                                     dangerouslySetInnerHTML={{__html:marked(item.introduce)}}
+                                ></div>
                             </List.Item>
                         )}
                     />
@@ -54,11 +77,10 @@ const Home = (list) => {
     )
 }
 
-Home.getInitialProps = async () => {
-    const promise = new Promise((resolve) => {
-        axios('http://127.0.0.1:7001/default/getArticleList').then(
-            (res) => {
-                //console.log('远程获取数据结果:',res.data.data)
+Home.getInitialProps = async ()=>{
+    const promise = new Promise((resolve)=>{
+        axios(servicePath.getArticleList).then(
+            (res)=>{
                 resolve(res.data)
             }
         )
@@ -66,6 +88,7 @@ Home.getInitialProps = async () => {
 
     return await promise
 }
+
 
 
 export default Home

@@ -17,6 +17,7 @@ import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
 
 import Tocify from '../components/tocify.tsx'
+import  servicePath  from '../config/apiUrl'
 
 const Detailed = (props) => {
 
@@ -48,6 +49,7 @@ const Detailed = (props) => {
     })
 
     let html = marked(props.article_content)
+    // console.log(props)
 
     return (
         <>
@@ -61,20 +63,20 @@ const Detailed = (props) => {
                         <div className="bread-div">
                             <Breadcrumb>
                                 <Breadcrumb.Item><a href="/">首页</a></Breadcrumb.Item>
-                                <Breadcrumb.Item><a href="/list">视频列表</a></Breadcrumb.Item>
-                                <Breadcrumb.Item>xxxx</Breadcrumb.Item>
+                                <Breadcrumb.Item><a href="/list">列表</a></Breadcrumb.Item>
+                                <Breadcrumb.Item>{props.title}</Breadcrumb.Item>
                             </Breadcrumb>
                         </div>
 
                         <div>
                             <div className="detailed-title">
-                                React实战视频教程-技术胖Blog开发(更新08集)
+                                {props.title}
                             </div>
 
                             <div className="list-icon center">
-                                <span><CalendarOutlined/> 2019-06-28</span>
-                                <span><BranchesOutlined/> 视频教程</span>
-                                <span><TeamOutlined/> 5498人</span>
+                                <span><CalendarOutlined/> {props.addTime}</span>
+                                <span><BranchesOutlined/> {props.typeName}</span>
+                                <span><TeamOutlined/> {props.view_count}人</span>
                             </div>
 
                             <div className="detailed-content"
@@ -113,9 +115,9 @@ Detailed.getInitialProps = async(context)=>{
     let id =context.query.id
     const promise = new Promise((resolve)=>{
 
-        axios('http://127.0.0.1:7001/default/getArticleById/'+id).then(
+        axios(servicePath.getArticleById+id).then(
             (res)=>{
-                console.log(res)
+                // console.log(title)
                 resolve(res.data.data[0])
             }
         )
