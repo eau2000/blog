@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f14fa30a-6547-429c-b96a-1f3f1a9ba543" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/pages/comm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Advert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Author.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/detailed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/advert.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/author.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/pages/detailed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/hello.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/comm.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/comm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611147329502</updated>
       <workItem from="1611147332527" duration="5480000" />
+      <workItem from="1611201257142" duration="8818000" />
     </task>
     <servers />
   </component>
@@ -65,6 +70,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
